@@ -3,6 +3,7 @@ services:
  - docker
 
 before_install:
+ - 'sudo gem install bundler'
  - docker build -t waqaransari/docker-react -f dockerfile.dev .
  
 script:
