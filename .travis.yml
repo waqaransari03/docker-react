@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - 10
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '1.7.4'
 script: "rake"
 sudo: required
 services:
