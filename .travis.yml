@@ -7,6 +7,7 @@ services:
  - docker
 
 before_install:
+ - npm install
  - docker build -t waqaransari/docker-react -f dockerfile.dev .
 
 script:
