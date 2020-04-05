@@ -1,15 +1,9 @@
-language: ruby
-install:
-  - gem uninstall bundler
-  - gem install bundler --version '1.7.4'
-script: "rake"
 sudo: required
 services:
  - docker
 
-before_install:
+before_install: gem install bundler --pre
  - docker build -t waqaransari/docker-react -f dockerfile.dev .
- 
+
 script:
- - docker run waqaransari/docker-react npm run test -- --coverage
- 
+ - docker run waqaransari/docker-react npm run test -- --coverage 
