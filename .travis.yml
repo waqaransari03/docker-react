@@ -5,7 +5,7 @@ sudo: required
 services:
  - docker
 
-before_install: gem install bundler --pre
+before_install: gem install bundler
  - docker build -t waqaransari/docker-react -f dockerfile.dev .
 
 script:
