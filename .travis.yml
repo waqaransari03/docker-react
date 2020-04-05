@@ -10,7 +10,5 @@ before_install:
  - docker build -t waqaransari/docker-react -f dockerfile.dev .
 
 script:
- - rm -rf node_modules
- - npm install
- - docker run -e CI=true waqaransari/docker-react npm run test
+ - docker run waqaransari/docker-react npm run test
  
